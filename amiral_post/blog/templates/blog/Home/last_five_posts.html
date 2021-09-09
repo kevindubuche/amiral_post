@@ -1,0 +1,26 @@
+{% load static %}
+
+ <div class="banner-news">
+            <div class="container-fluid p-0">
+                <div class="banner-slider-active no-gutters ">
+                  {% for last_five_post in last_five_posts %}
+                        <div class="single-sliders">
+                            <div class="single-baner-nw mb-30 text-center">
+                                <div class="banner-img-cap">
+                                    <div class="banner-img">
+                                        {% comment %} <img src="{% static 'assets/img/gallery/banner-cap2.png' %}" alt=""> {% endcomment %}
+                                        <img src="{{ last_five_post.thumbnail.url }}" alt="">
+                                    </div>
+                                    <div class="banner-cap">
+                                        <p>Derniere nouvelle</p>
+                                    <h3><a href="{% url 'post_details' last_five_post.slug %}">{{ last_five_post.title }}</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>     
+                  {% endfor %}
+                   
+            
+                </div>
+            </div>
+        </div>

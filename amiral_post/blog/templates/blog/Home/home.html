@@ -1,0 +1,403 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block content %}
+        <!-- Banner News Area Start -->
+       {% include 'blog/Home/last_five_posts.html' %}
+        <!-- Banner News Area End -->
+        <!-- Latest Posts Area -->
+        <div class="latest-posts pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-tittle mb-35">
+                            <h2>posts recents</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="latest-slider">
+                            <div class="slider-active">
+                                <!-- Single slider -->
+                                <div class="single-slider">
+                                    <div class="trending-top mb-30">
+                                        <div class="trend-top-img text-center">
+                                            <img src="assets/img/gallery/latest-post.png" alt="">
+                                            <div class="trend-top-cap">
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Economie</span>
+                                                <h2><a href="post_details.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">exemple titre</a></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single slider -->
+                                <div class="single-slider">
+                                    <div class="trending-top mb-30">
+                                        <div class="trend-top-img text-center">
+                                            <img src="assets/img/gallery/latest-post.png" alt="">
+                                            <div class="trend-top-cap">
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">titre</span>
+                                                <h2><a href="post_details.html"  data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">resume</a></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- smoll items -->
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="single-baner-nw2 mb-30 ">
+                                    <div class="banner-img-cap2">
+                                        <div class="banner-img">
+                                            <img src="assets/img/gallery/latest-post2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="single-baner-nw2 mb-30">
+                                    <div class="banner-img-cap2">
+                                        <div class="banner-cap2 banner-cap3">
+                                            <p>Culture et Sport</p>
+                                           <h3><a href="post_details.html">titre et details</a></h3>
+                                            <p class="normal">resume</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="single-baner-nw2 mb-30">
+                                    <div class="banner-img-cap2">
+                                        <div class="banner-cap2 banner-cap3">
+                                            <p>International</p>
+                                            <h3><a href="post_details.html">titre et details</a></h3>
+                                            <p  class="normal">resume</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="single-baner-nw2 mb-30 ">
+                                    <div class="banner-img-cap2">
+                                        <div class="banner-img">
+                                            <img src="assets/img/gallery/latest-post02.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-baner-nw2 mb-30 text-center">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="assets/img/gallery/latest-post3.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p>National</p>
+                                    <h3><a href="post_details.html">Titre et details</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-baner-nw2 mb-30 text-center">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="assets/img/gallery/latest-post4.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p>Diplomatie</p>
+                                    <h3><a href="post_details.html">Titre et details</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Latest Posts End-->
+        <!-- Video Area Start -->
+        <div class="video-area">
+            <div class="container-fluid">
+                <div class="video-wrapper">
+                    <div class="left-content">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="section-tittle section-tittle2 mb-35">
+                                    <h2 class="mb-10">Videos</h2>
+                                    <p>les dernieres videos</p>
+                                    <p class="video-cap">
+                                        titre<br> et<br> details
+                                    </p>
+                                    <small></small>
+                                </div>
+                            </div>
+                            <!--Left Single -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-baner-nw4 mb-30">
+                                    <div class="banner-img-cap4">
+                                        <div class="banner-img4">
+                                            <img src="assets/img/gallery/video_img1.png" alt="">
+                                            <!--video iocn -->
+                                            <div class="video-icon video-icon2">
+                                                <a class="popup-video btn-icon" href="https://youtu.be/3KGOuinIL9c" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="banner-cap4">
+                                            <h3><a href="post_details.html">sous titre/details</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-baner-nw4 mb-30">
+                                    <div class="banner-img-cap4">
+                                        <div class="banner-img4">
+                                            <img src="assets/img/gallery/video_img2.png" alt="">
+                                            <!--video iocn -->
+                                            <div class="video-icon video-icon2">
+                                                <a class="popup-video btn-icon" href="" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="banner-cap4">
+                                            <h3><a href="post_details.html">sous-titre/details</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-content">
+                        <div class="video-img">
+                            <img src="assets/img/gallery/video_bg.png" alt="">
+                            <!--video iocn -->
+                            <div class="video-icon video-icon2">
+                                <a class="popup-video btn-icon" href="" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video Area End -->
+        <!-- Nwes slider Start -->
+        <div class="nes-slider-area pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="news-slider-active">
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="assets/img/gallery/news-slider1.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="assets/img/gallery/news-slider2.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="assets/img/gallery/news-slider3.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="assets/img/gallery/news-slider4.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="assets/img/gallery/news-slider5.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="assets/img/gallery/news-slider6.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nwes slider End -->
+        <!-- Top Posts Start -->
+        <div class="top-post-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-tittle mb-35">
+                            <h2>Culture et Sport</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-lg-between">
+                    <div class="col-lg-8 col-md-8">
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="assets/img/gallery/top-psot1.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span>Tendance</span>
+                                    <a href="post_details.html"><h4>Titre et details</h4></a>
+                                    <p>resume</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="assets/img/gallery/top-psot2.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span>Tendance</span>
+                                    <a href="post_details.html"><h4>Titre et details</h4></a>
+                                    <p>resume</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="assets/img/gallery/top-psot3.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span>Tendance</span>
+                                    <a href="post_details.html"><h4>Titre et details</h4></a>
+                                    <p>resume</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="assets/img/gallery/top-psot4.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span>tendance</span>
+                                    <a href="post_details.html"><h4>titre et details</h4></a>
+                                    <p>resume</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="assets/img/gallery/top-psot5.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span>Tendance</span>
+                                    <a href="post_details.html"><h4>Titre et details</h4></a>
+                                    <p>resume</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="google-add mb-40">
+                            <img src="assets/img/gallery/Ad.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Posts End -->
+        <!-- Latest Posts Area -->
+        <div class="latest-posts pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-tittle mb-35">
+                            <h2>International</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="assets/img/gallery/trend1.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p>Derniere nouvelle</p>
+                                   <h3><a href="post_details.html">Titre et details</a></h3>
+                                    <p class="blog-text" style="text-transform: normal !important;">resume de l'article</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="assets/img/gallery/trend2.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p>Derniere nouvelle</p>
+                                   <h3><a href="post_details.html">Titre et details</a></h3>
+                                    <p class="blog-text" style="text-transform: normal !important;">resume de l'article</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="assets/img/gallery/trend3.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p>Derniere nouvelle</p>
+                                   <h3><a href="post_details.html">titre et details</a></h3>
+                                    <p class="blog-text" style="text-transform: normal !;">resume de l'article</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Latest Posts End-->
+        <!-- Want To work -->
+        <section class="wantToWork-area gray-bg ">
+            <div class="container">
+                <div class="wants-wrapper w-padding2">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-xl-6 col-lg-7 col-md-10">
+                            <div class="wantToWork-caption wantToWork-caption2">
+                                <h2>Abonnez-vous pour les dernieres mises a jour</h2>
+                                <p>Vous recevrez des notifications par email,vous informant des dernieres nouvelles</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-12">
+                            <form action="#" class="search-box">
+                                <div class="input-form">
+                                    <input type="text" placeholder="Entrez votre  email">
+                                </div>
+                                <div class="search-form">
+                                    <a href="#">S'enregistrer </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Want To work End -->
+
+{% endblock %}
