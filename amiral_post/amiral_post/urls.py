@@ -18,10 +18,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from blog.views import frontpage, post_details, posts_of_a_category, about, contact
+from blog.views import home, post_details, posts_of_a_category, about, contact
 
 urlpatterns = [
-    path('', frontpage, name='home'),
+    path('', home, name='home'),
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
     path('article/<slug:slug>/', post_details, name='post_details'),
