@@ -55,33 +55,37 @@
                                 <div class="single-baner-nw2 mb-30 ">
                                     <div class="banner-img-cap2">
                                         <div class="banner-img">
-                                            <img src="assets/img/gallery/latest-post2.png" alt="">
+                                            <img src="{% static 'assets/img/gallery/latest-post2.png' %}" alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            {% if last_post_of_category_culture_et_sport %}
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="single-baner-nw2 mb-30">
+                                        <div class="banner-img-cap2">
+                                            <div class="banner-cap2 banner-cap3">
+                                                <p>{{ last_post_of_category_culture_et_sport.category.name }}</p>
+                                                <h3><a href="{% url 'post_details' last_post_of_category_culture_et_sport.slug %}">{{ last_post_of_category_culture_et_sport.title }} </a></h3>
+                                                <p class="normal">{{ last_post_of_category_culture_et_sport.category.name }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if last_post_of_category_international %}
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="single-baner-nw2 mb-30">
                                     <div class="banner-img-cap2">
                                         <div class="banner-cap2 banner-cap3">
-                                            <p>Culture et Sport</p>
-                                           <h3><a href="post_details.html">titre et details</a></h3>
-                                            <p class="normal">resume</p>
+                                            <p>{{ last_post_of_category_international.category.name }}</p>
+                                            <h3><a href="{% url 'post_details' last_post_of_category_international.slug %}">{{ last_post_of_category_international.title }} </a></h3>
+                                            <p  class="normal">{{ last_post_of_category_international.intro }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6">
-                                <div class="single-baner-nw2 mb-30">
-                                    <div class="banner-img-cap2">
-                                        <div class="banner-cap2 banner-cap3">
-                                            <p>International</p>
-                                            <h3><a href="post_details.html">titre et details</a></h3>
-                                            <p  class="normal">resume</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endif %}
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="single-baner-nw2 mb-30 ">
                                     <div class="banner-img-cap2">
@@ -93,6 +97,7 @@
                             </div>
                         </div>
                     </div>
+                     {% if last_post_of_category_national %}   
                     <div class="col-lg-6">
                         <div class="single-baner-nw2 mb-30 text-center">
                             <div class="banner-img-cap2">
@@ -100,12 +105,14 @@
                                     <img src="assets/img/gallery/latest-post3.png" alt="">
                                 </div>
                                 <div class="banner-cap2">
-                                    <p>National</p>
-                                    <h3><a href="post_details.html">Titre et details</a></h3>
+                                    <p>{{ last_post_of_category_national.category.name }}</p>
+                                    <h3><a href="{% url 'post_details' last_post_of_category_national.slug %}">{{ last_post_of_category_national.title }} </a></h3>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {% endif %}
+                    {% if last_post_of_category_diplomatie %}  
                     <div class="col-lg-6">
                         <div class="single-baner-nw2 mb-30 text-center">
                             <div class="banner-img-cap2">
@@ -113,12 +120,13 @@
                                     <img src="assets/img/gallery/latest-post4.png" alt="">
                                 </div>
                                 <div class="banner-cap2">
-                                    <p>Diplomatie</p>
-                                    <h3><a href="post_details.html">Titre et details</a></h3>
+                                    <p>{{ last_post_of_category_diplomatie.category.name }}</p>
+                                    <h3><a href="{% url 'post_details' last_post_of_category_diplomatie.slug %}">{{ last_post_of_category_diplomatie.title }} </a></h3>
                                 </div>
                             </div>
                         </div>
                     </div>
+                     {% endif %}
                 </div>
             </div>
         </div>
@@ -242,70 +250,21 @@
                 <div class="row justify-content-lg-between">
                     <div class="col-lg-8 col-md-8">
                         <!-- single-job-content -->
-                        <div class="single-job-items mb-30">
-                            <div class="job-items">
-                                <div class="company-img">
-                                    <a href="#"><img src="assets/img/gallery/top-psot1.png" alt=""></a>
+                           {% for random_post_of_category_culture_et_sport in random_5_posts_of_category_culture_et_sport %}
+                                <div class="single-job-items mb-30">
+                                    <div class="job-items">
+                                        <div class="company-img">
+                                            <a href="#"><img src="{% static 'assets/img/gallery/top-psot1.png' %}" alt=""></a>
+                                        </div>
+                                        <div class="job-tittle">
+                                            <span>{{ random_post_of_category_culture_et_sport.category }}</span>
+                                            <a href="{% url 'post_details' random_post_of_category_culture_et_sport.slug %}"><h4>{{ random_post_of_category_culture_et_sport.title }}</h4></a>
+                                            <p>{{ random_post_of_category_culture_et_sport.title }}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="job-tittle">
-                                    <span>Tendance</span>
-                                    <a href="post_details.html"><h4>Titre et details</h4></a>
-                                    <p>resume</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single-job-content -->
-                        <div class="single-job-items mb-30">
-                            <div class="job-items">
-                                <div class="company-img">
-                                    <a href="#"><img src="assets/img/gallery/top-psot2.png" alt=""></a>
-                                </div>
-                                <div class="job-tittle">
-                                    <span>Tendance</span>
-                                    <a href="post_details.html"><h4>Titre et details</h4></a>
-                                    <p>resume</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single-job-content -->
-                        <div class="single-job-items mb-30">
-                            <div class="job-items">
-                                <div class="company-img">
-                                    <a href="#"><img src="assets/img/gallery/top-psot3.png" alt=""></a>
-                                </div>
-                                <div class="job-tittle">
-                                    <span>Tendance</span>
-                                    <a href="post_details.html"><h4>Titre et details</h4></a>
-                                    <p>resume</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single-job-content -->
-                        <div class="single-job-items mb-30">
-                            <div class="job-items">
-                                <div class="company-img">
-                                    <a href="#"><img src="assets/img/gallery/top-psot4.png" alt=""></a>
-                                </div>
-                                <div class="job-tittle">
-                                    <span>tendance</span>
-                                    <a href="post_details.html"><h4>titre et details</h4></a>
-                                    <p>resume</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single-job-content -->
-                        <div class="single-job-items mb-30">
-                            <div class="job-items">
-                                <div class="company-img">
-                                    <a href="#"><img src="assets/img/gallery/top-psot5.png" alt=""></a>
-                                </div>
-                                <div class="job-tittle">
-                                    <span>Tendance</span>
-                                    <a href="post_details.html"><h4>Titre et details</h4></a>
-                                    <p>resume</p>
-                                </div>
-                            </div>
-                        </div>
+                            {% endfor %}
+                       
                     </div>
                     <div class="col-lg-3 col-md-3">
                         <div class="google-add mb-40">
@@ -327,48 +286,23 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-baner-nw2 mb-30">
-                            <div class="banner-img-cap2">
-                                <div class="banner-img">
-                                    <img src="assets/img/gallery/trend1.png" alt="">
-                                </div>
-                                <div class="banner-cap2">
-                                    <p>Derniere nouvelle</p>
-                                   <h3><a href="post_details.html">Titre et details</a></h3>
-                                    <p class="blog-text" style="text-transform: normal !important;">resume de l'article</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-baner-nw2 mb-30">
-                            <div class="banner-img-cap2">
-                                <div class="banner-img">
-                                    <img src="assets/img/gallery/trend2.png" alt="">
-                                </div>
-                                <div class="banner-cap2">
-                                    <p>Derniere nouvelle</p>
-                                   <h3><a href="post_details.html">Titre et details</a></h3>
-                                    <p class="blog-text" style="text-transform: normal !important;">resume de l'article</p>
+                    {% for random_post_of_category_international in random_3_posts_of_category_international %}      
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-baner-nw2 mb-30">
+                                <div class="banner-img-cap2">
+                                    <div class="banner-img">
+                                        <img src="{% static 'assets/img/gallery/trend1.png' %}" alt="">
+                                    </div>
+                                    <div class="banner-cap2">
+                                        <p>{{ random_post_of_category_international.category.name }}</p>
+                                    <h3><a  href="{% url 'post_details' random_post_of_category_international.slug %}">{{ random_post_of_category_international.title }}</a></h3>
+                                        <p class="blog-text" style="text-transform: normal !important;">{{ random_post_of_category_international.intro }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-baner-nw2 mb-30">
-                            <div class="banner-img-cap2">
-                                <div class="banner-img">
-                                    <img src="assets/img/gallery/trend3.png" alt="">
-                                </div>
-                                <div class="banner-cap2">
-                                    <p>Derniere nouvelle</p>
-                                   <h3><a href="post_details.html">titre et details</a></h3>
-                                    <p class="blog-text" style="text-transform: normal !;">resume de l'article</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                   
                 </div>
             </div>
         </div>
