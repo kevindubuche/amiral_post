@@ -3,6 +3,7 @@ from django.template.defaultfilters import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length = 255, verbose_name="Nom")
+    thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Image')
 
     class Meta:
         verbose_name = "Catégorie"
@@ -17,6 +18,7 @@ class Post(models.Model):
     thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Image')
     slug = models.SlugField()
     intro = models.TextField()
+    keywords = models.TextField(verbose_name='Mots clés')
     content = models.TextField(verbose_name='Contenu')
     date_added = models.DateTimeField(auto_now_add=True, verbose_name='Date de création')
 

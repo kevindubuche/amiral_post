@@ -2,8 +2,16 @@ from django.core import paginator
 from django.shortcuts import render
 from .models import Category, Post
 from django.core.paginator import Paginator
+from django.shortcuts import redirect
 
 def home(request): 
+    categories = Category.objects.all()
+    # HANDLE THE SEARCH ENGINE
+    if 'keyword' in request.GET:
+        keyword = request.GET['keyword']
+        posts = Post.objects.filter(keywords__icontains = keyword)
+        return render(request, 'blog/Category/posts_of_a_category.html', {'posts': posts, 'categories': categories})
+    # HANDLE THE SEARCH ENGINE___END
     filter_fields = ("category")
     posts = Post.objects.all()
     try:
@@ -30,7 +38,7 @@ def home(request):
        random_3_posts_of_category_international = Post.objects.filter(category__name__iexact = 'international').order_by('?')[:3]
     except :
         random_3_posts_of_category_international = None
-    categories = Category.objects.all()
+   
     last_five_posts = Post.objects.order_by('-id')[:5]
     context = {'posts': posts, 'categories': categories, 'last_five_posts':last_five_posts, 'last_post_of_category_national': last_post_of_category_national, 'last_post_of_category_international': last_post_of_category_international, 'last_post_of_category_diplomatie' : last_post_of_category_diplomatie, 'last_post_of_category_culture_et_sport': last_post_of_category_culture_et_sport, 'random_5_posts_of_category_culture_et_sport': random_5_posts_of_category_culture_et_sport, 'random_3_posts_of_category_international': random_3_posts_of_category_international}
     return render(request, 'blog/Home/home.html', context)

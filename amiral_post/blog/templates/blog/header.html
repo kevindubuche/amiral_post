@@ -9,12 +9,18 @@
                             <div class="row d-flex justify-content-lg-between align-items-center">
                                 <div class="header-info-left">
                                     <li class="d-none d-lg-block">
+                                    <form>
                                         <div class="form-box f-right ">
-                                            <input type="text" name="Search" placeholder="Recherche">
-                                            <div class="search-icon">
+                                            <input type="text" name="keyword" placeholder="Recherche">
+                                            {% comment %} <div class="search-icon">
                                                 <i class="ti-search"></i>
-                                            </div>
+                                            </div> {% endcomment %}
+                                            <button class="search-icon">
+                                                  <i class="ti-search"></i>
+                                            </button>
                                         </div>
+                                    </form>
+                                    
                                      </li>
                                 </div>
                                 <div class="header-info-mid">
@@ -25,7 +31,7 @@
                                 </div>
                                 <div class="header-info-right d-flex align-items-center">
                                    <ul>
-                                       <li><a href="{% url 'about' %}" class="genric-btn info-border circle arrow small">A propos <span
+                                       <li><a href="{% url 'about' %}" class="genric-btn info-border circle arrow small">À propos <span
                              							class="lnr lnr-arrow-right"></span></a></li>
                                        <li><a href="{% url 'contact' %}" class="genric-btn info-border circle arrow small">Contact <span
                              							class="lnr lnr-arrow-right"></span></a></li>
