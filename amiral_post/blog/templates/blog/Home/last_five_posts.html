@@ -9,7 +9,7 @@
                                 <div class="banner-img-cap">
                                     <div class="banner-img">
                                         {% comment %} <img src="{% static 'assets/img/gallery/banner-cap2.png' %}" alt=""> {% endcomment %}
-                                        <img src="{{ last_five_post.thumbnail.url }}" alt="">
+                                        <a href="{% url 'post_details' last_five_post.slug %}"> <img src="{{ last_five_post.thumbnail.url }}" alt="" width="350" height="350"> </a>
                                     </div>
                                     <div class="banner-cap">
                                         <p>Derniere nouvelle</p>
