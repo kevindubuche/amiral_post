@@ -19,6 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from blog.views import home, post_details, posts_of_a_category, about, contact
+from django.views.static import serve
+from django.conf.urls import url
 
 urlpatterns = [
     path('', home, name='home'),
@@ -28,4 +30,7 @@ urlpatterns = [
     path('category/<id>/', posts_of_a_category, name='category'),
     path('summernote/', include('django_summernote.urls')),
     path('admin/', admin.site.urls),
+
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
