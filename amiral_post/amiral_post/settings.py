@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-gk6(l)_=o2sv6sfy2g!w^fb94a!=&4v+f3c^6qjry#0xl+@(vn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','amiral-post.herokuapp.com']
 
 
 # Application definition
