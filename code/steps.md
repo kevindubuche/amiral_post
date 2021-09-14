@@ -4,6 +4,7 @@
 4. install dependencies
 pip install django
 pip install django-summernote
+pip install gunicorn django-heroku
 python -m pip install Pillow
 5. django-admin startproject amiral_post .
 6. python manage.py startapp blog

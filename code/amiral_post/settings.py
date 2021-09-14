@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-3if4i1&&y&loohp)cs6xenj3bh2u_%6p$gk24kl(im80z)yh(z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','amiral-post.herokuapp.com']
+ALLOWED_HOSTS = ['*','localhost','127.0.0.1','amiral-post.herokuapp.com']
 
 
 # Application definition
@@ -123,14 +124,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = (
-# os.path.join(BASE_DIR, 'static'),
-# )
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static') ]
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# if DEBUG:
+#     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static') ]
+# else:
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -143,3 +142,4 @@ SUMMERNOTE_THEME = 'bs4'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals())
