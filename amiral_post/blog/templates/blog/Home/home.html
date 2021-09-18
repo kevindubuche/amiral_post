@@ -55,7 +55,7 @@
                                 <div class="single-baner-nw2 mb-30 ">
                                     <div class="banner-img-cap2">
                                         <div class="banner-img">
-                                            <img src="{% static 'assets/img/gallery/latest-post2.png' %}" alt="">
+                                            <img src="{{ last_post_of_category_culture_et_sport.thumbnail.url }}" width="280" height="280"   alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@
                                             <div class="banner-cap2 banner-cap3">
                                                 <p>{{ last_post_of_category_culture_et_sport.category.name }}</p>
                                                 <h3><a href="{% url 'post_details' last_post_of_category_culture_et_sport.slug %}">{{ last_post_of_category_culture_et_sport.title }} </a></h3>
-                                                <p class="normal">{{ last_post_of_category_culture_et_sport.category.name }}</p>
+                                                <p class="normal">{{ last_post_of_category_culture_et_sport.intro }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -77,6 +77,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="single-baner-nw2 mb-30">
                                     <div class="banner-img-cap2">
+                                        
                                         <div class="banner-cap2 banner-cap3">
                                             <p>{{ last_post_of_category_international.category.name }}</p>
                                             <h3><a href="{% url 'post_details' last_post_of_category_international.slug %}">{{ last_post_of_category_international.title }} </a></h3>
@@ -85,28 +86,30 @@
                                     </div>
                                 </div>
                             </div>
-                            {% endif %}
+                            
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="single-baner-nw2 mb-30 ">
                                     <div class="banner-img-cap2">
                                         <div class="banner-img">
-                                            <img src="assets/img/gallery/latest-post02.png" alt="">
+                                            <img src={{last_post_of_category_international.thumbnail.url}} width="280" height="280"  alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {% endif %}
                      {% if last_post_of_category_national %}   
                     <div class="col-lg-6">
                         <div class="single-baner-nw2 mb-30 text-center">
                             <div class="banner-img-cap2">
                                 <div class="banner-img">
-                                    <img src="assets/img/gallery/latest-post3.png" alt="">
+                                    <img src={{last_post_of_category_national.thumbnail.url}} width="550" height="450" alt="">
                                 </div>
                                 <div class="banner-cap2">
                                     <p>{{ last_post_of_category_national.category.name }}</p>
                                     <h3><a href="{% url 'post_details' last_post_of_category_national.slug %}">{{ last_post_of_category_national.title }} </a></h3>
+                                    <p class= "normal">{{ last_post_of_category_national.intro }}</p>
                                 </div>
                             </div>
                         </div>
@@ -117,11 +120,12 @@
                         <div class="single-baner-nw2 mb-30 text-center">
                             <div class="banner-img-cap2">
                                 <div class="banner-img">
-                                    <img src="assets/img/gallery/latest-post4.png" alt="">
+                                    <img src={{last_post_of_category_diplomatie.thumbnail.url}} width="550" height="450" alt="">
                                 </div>
                                 <div class="banner-cap2">
                                     <p>{{ last_post_of_category_diplomatie.category.name }}</p>
                                     <h3><a href="{% url 'post_details' last_post_of_category_diplomatie.slug %}">{{ last_post_of_category_diplomatie.title }} </a></h3>
+                                    <p class="normal">{{ last_post_of_category_diplomatie.intro }}</p>
                                 </div>
                             </div>
                         </div>
@@ -201,36 +205,18 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="news-slider-active">
+                            
+                            {% for category in categories %}
                             <div class="single-news-slider">
                                 <div class="news-img">
-                                    <a href="category.html"><img src="assets/img/gallery/news-slider1.png" alt=""></a>
+                                    <a href="{% url 'category' category.id %}"><img src={{category.thumbnail.url}} alt=""></a>
                                 </div>
                             </div>
-                            <div class="single-news-slider">
-                                <div class="news-img">
-                                    <a href="category.html"><img src="assets/img/gallery/news-slider2.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="single-news-slider">
-                                <div class="news-img">
-                                    <a href="category.html"><img src="assets/img/gallery/news-slider3.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="single-news-slider">
-                                <div class="news-img">
-                                    <a href="category.html"><img src="assets/img/gallery/news-slider4.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="single-news-slider">
-                                <div class="news-img">
-                                    <a href="category.html"><img src="assets/img/gallery/news-slider5.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="single-news-slider">
-                                <div class="news-img">
-                                    <a href="category.html"><img src="assets/img/gallery/news-slider6.png" alt=""></a>
-                                </div>
-                            </div>
+
+
+                            {% endfor %}
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -254,7 +240,7 @@
                                 <div class="single-job-items mb-30">
                                     <div class="job-items">
                                         <div class="company-img">
-                                            <a href="#"><img src="{% static 'assets/img/gallery/top-psot1.png' %}" alt=""></a>
+                                            <a href="{% url 'post_details' random_post_of_category_culture_et_sport.slug %}"><img src="{{ random_post_of_category_culture_et_sport.thumbnail.url }}" alt=""></a>
                                         </div>
                                         <div class="job-tittle">
                                             <span>{{ random_post_of_category_culture_et_sport.category }}</span>
@@ -291,7 +277,7 @@
                             <div class="single-baner-nw2 mb-30">
                                 <div class="banner-img-cap2">
                                     <div class="banner-img">
-                                        <img src="{% static 'assets/img/gallery/trend1.png' %}" alt="">
+                                        <img src="{{random_post_of_category_international.thumbnail.url}}" alt="">
                                     </div>
                                     <div class="banner-cap2">
                                         <p>{{ random_post_of_category_international.category.name }}</p>
