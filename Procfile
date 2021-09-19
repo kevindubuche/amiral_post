@@ -1,1 +1,0 @@
-web: gunicorn amiral_post.wsgi --log-file -

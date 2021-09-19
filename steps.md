@@ -20,8 +20,10 @@ python -m pip install Pillow
 1. Create procfile
 2. in seetings set DEBUG to Fasle
 
+ heroku run python3 manage.py makemigrations --app amiral-post
 
 django_heroku==0.3.1
-Django==2.2.12
 django_summernote==0.8.11.6
-gunicorn==19.7.1
+Django==2.2.12
+gunicorn==20
+Pillow==8.3.2
