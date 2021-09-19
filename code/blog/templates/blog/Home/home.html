@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section-tittle mb-35">
-                            <h2>posts recents</h2>
+                            <h2>Posts récents</h2>
                         </div>
                     </div>
                 </div>
@@ -25,10 +25,10 @@
                                 <div class="single-slider">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img text-center">
-                                            <img src="assets/img/gallery/latest-post.png" alt="">
+                                            <img src="{{last_post_of_category_economie.thumbnail.url}}" alt="">
                                             <div class="trend-top-cap">
-                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Economie</span>
-                                                <h2><a href="post_details.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">exemple titre</a></h2>
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">{{ last_post_of_category_economie.category.name  }}</span>
+                                                <h2><a href="{% url 'post_details' last_post_of_category_economie.slug %}" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ last_post_of_category_economie.title }}</a></h2>
                                             </div>
                                         </div>
                                     </div>
@@ -37,10 +37,10 @@
                                 <div class="single-slider">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img text-center">
-                                            <img src="assets/img/gallery/latest-post.png" alt="">
+                                            <img src="{{last_post_of_category_economie.thumbnail.url}}" alt="">
                                             <div class="trend-top-cap">
-                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">titre</span>
-                                                <h2><a href="post_details.html"  data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">resume</a></h2>
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"> {{  last_post_of_category_economie.title  }}</span>
+                                                <h2><a href="{% url 'post_details' last_post_of_category_economie.slug %}"  data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ last_post_of_category_economie.intro }}</a></h2>
                                             </div>
                                         </div>
                                     </div>

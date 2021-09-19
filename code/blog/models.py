@@ -43,3 +43,8 @@ class Post(models.Model):
 
     # def __str__(self):
     #     return self.title
+
+class Pub(models.Model):
+    title = models.CharField(max_length=255, verbose_name='Titre', help_text='Maximum: 255 caractères')
+    link = models.CharField(max_length=500, verbose_name='Lien', help_text='Maximum: 500 caractères')
+    thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Image')

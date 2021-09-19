@@ -10,8 +10,8 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
-                                <li class="breadcrumb-item"><a href="#">Category</a></li>
-                                <li class="breadcrumb-item"><a href="#">Post details</a></li>
+                                <li class="breadcrumb-item"><a href="#">{{ post.category.name }}</a></li>
+                                <li class="breadcrumb-item"><a href="#">{{ post.title }}</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -74,48 +74,22 @@
                     </div>
                 </div>
                 <div class="row">
+                {% for random_3_post in random_3_posts %}
                     <div class="col-lg-4 col-md-6">
                         <div class="single-baner-nw2 mb-30">
                             <div class="banner-img-cap2">
                                 <div class="banner-img">
-                                    <img src="assets/img/gallery/trend1.png" alt="">
+                                    <img src="{{random_3_post.thumbnail.url }}" alt="">
                                 </div>
                                 <div class="banner-cap2">
-                                    <p>Technologie</p>
-                                   <h3><a href="post_details.html">Titre et details</a></h3>
-                                    <p class="blog-text" style="text-transform: normal !important;">resume</p>
+                                    <p>{{ random_3_post.category.name }}</p>
+                                   <h3><a href="{% url 'post_details' random_3_post.slug %}">{{ random_3_post.title }}</a></h3>
+                                    <p class="blog-text" style="text-transform: normal !important;">{{ random_3_post.intro }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-baner-nw2 mb-30">
-                            <div class="banner-img-cap2">
-                                <div class="banner-img">
-                                    <img src="assets/img/gallery/trend2.png" alt="">
-                                </div>
-                                <div class="banner-cap2">
-                                    <p>Economie</p>
-                                   <h3><a href="post_details.html">Titre et details</a></h3>
-                                    <p class="blog-text" style="text-transform: normal !important;">resume</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-baner-nw2 mb-30">
-                            <div class="banner-img-cap2">
-                                <div class="banner-img">
-                                    <img src="assets/img/gallery/trend3.png" alt="">
-                                </div>
-                                <div class="banner-cap2">
-                                    <p>Politique</p>
-                                   <h3><a href="post_details.html">Titre et details</a></h3>
-                                    <p class="blog-text" style="text-transform: normal !;">resume</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                {% endfor %}
                 </div>
             </div>
         </div>
