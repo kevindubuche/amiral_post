@@ -21,6 +21,8 @@ python -m pip install Pillow
 2. in seetings set DEBUG to Fasle
 
  heroku run python3 manage.py makemigrations --app amiral-post
+ heroku run python3 manage.py migrate --app amiral-post
+  heroku run python3 manage.py createsuperuser --app amiral-post
 
 django_heroku==0.3.1
 django_summernote==0.8.11.6
