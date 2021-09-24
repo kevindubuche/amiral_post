@@ -9,8 +9,8 @@
                     <div class="col-lg-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
-                                <li class="breadcrumb-item"><a href="#">{{ post.category.name }}</a></li>
+                                <li class="breadcrumb-item"><a href="{% url 'home' %}">Accueil</a></li>
+                                <li class="breadcrumb-item"><a href="{% url 'category' post.category.id %}">{{ post.category.name }}</a></li>
                                 <li class="breadcrumb-item"><a href="#">{{ post.title }}</a></li>
                             </ol>
                         </nav>
