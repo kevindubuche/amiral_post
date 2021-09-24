@@ -1,6 +1,6 @@
 from django.core import paginator
 from django.shortcuts import render
-from .models import Category, Post, Pub
+from .models import Category, Post, Pub, Team
 from django.core.paginator import Paginator
 from django.shortcuts import redirect
 
@@ -73,7 +73,8 @@ def posts_of_a_category(request, id):
 
 def about(request):
     categories = Category.objects.all()
-    return render(request, 'blog/About/about.html', {'categories': categories})
+    teams = Team.objects.all()
+    return render(request, 'blog/About/about.html', {'categories': categories, 'teams' : teams })
 
 def contact(request):
     categories = Category.objects.all()

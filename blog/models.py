@@ -48,3 +48,10 @@ class Pub(models.Model):
     title = models.CharField(max_length=255, verbose_name='Titre', help_text='Maximum: 255 caractères')
     link = models.CharField(max_length=500, verbose_name='Lien', help_text='Maximum: 500 caractères')
     thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Image')
+
+
+class Team(models.Model):
+    title = models.CharField(max_length=255, verbose_name='Poste', help_text='Maximum: 255 caractères')
+    name = models.CharField(max_length=255, verbose_name='Nom et prénom', help_text='Maximum: 255 caractères')
+    description = models.TextField(verbose_name='Description', null=True)
+    thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Image')
