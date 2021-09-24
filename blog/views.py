@@ -43,7 +43,10 @@ def home(request):
     except :
         random_3_posts_of_category_international = None
    
-    last_five_posts = Post.objects.order_by('-id')[:5]
+    try:
+        last_five_posts = Post.objects.order_by('-id')[:5]
+    except :
+       last_five_posts = None
     context = {'posts': posts, 'categories': categories, 'last_five_posts':last_five_posts, 'last_post_of_category_national': last_post_of_category_national, 'last_post_of_category_international': last_post_of_category_international, 'last_post_of_category_diplomatie' : last_post_of_category_diplomatie, 'last_post_of_category_culture_et_sport': last_post_of_category_culture_et_sport, 'random_5_posts_of_category_culture_et_sport': random_5_posts_of_category_culture_et_sport, 'random_3_posts_of_category_international': random_3_posts_of_category_international, 'last_post_of_category_economie': last_post_of_category_economie}
     return render(request, 'blog/Home/home.html', context)
 

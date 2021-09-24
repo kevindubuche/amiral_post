@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3if4i1&&y&loohp)cs6xenj3bh2u_%6p$gk24kl(im80z)yh(z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*','https://amiral-post.herokuapp.com/','localhost','127.0.0.1','amiral-post.herokuapp.com']
 
@@ -80,9 +80,14 @@ WSGI_APPLICATION = 'amiral_post.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
         # 'NAME': str(BASE_DIR / 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ddgnb1l8o4o5b7',
+        'USER': 'znwfgwcecroprg',
+        'PASSWORD': '66026f91322ef6a146255683c2d50bb9aec152cbcab8d026e2a30c5c9035781f',
+        'HOST': 'ec2-44-198-100-81.compute-1.amazonaws.com'
     }
 }
 

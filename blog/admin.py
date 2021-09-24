@@ -3,8 +3,8 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import Post, Category, Pub
 
 class PostAdmin(SummernoteModelAdmin):
-    # exclude = ('slug', )
-    list_display = ('slug', 'title', 'category', 'date_added')
+    exclude = ('slug', )
+    list_display = ('title', 'category', 'date_added')
     list_display_links = ('title',)
     search_fields = ('title', )
     list_per_page = 15

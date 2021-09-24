@@ -4,7 +4,7 @@
 
 {% block content %}
         <!-- Banner News Area Start -->
-       {% include 'blog/Home/last_five_posts.html' %}
+      {% include 'blog/Home/last_five_posts.html' %}
         <!-- Banner News Area End -->
         <!-- Latest Posts Area -->
         <div class="latest-posts pt-80 pb-80">
@@ -20,32 +20,34 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="latest-slider">
-                            <div class="slider-active">
-                                <!-- Single slider -->
-                                <div class="single-slider">
-                                    <div class="trending-top mb-30">
-                                        <div class="trend-top-img text-center">
-                                            <img src="{{last_post_of_category_economie.thumbnail.url}}" alt="">
-                                            <div class="trend-top-cap">
-                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">{{ last_post_of_category_economie.category.name  }}</span>
-                                                <h2><a href="{% url 'post_details' last_post_of_category_economie.slug %}" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ last_post_of_category_economie.title }}</a></h2>
+                            {% if last_post_of_category_culture_et_sport %}
+                                <div class="slider-active">
+                                    <!-- Single slider -->
+                                    <div class="single-slider">
+                                        <div class="trending-top mb-30">
+                                            <div class="trend-top-img text-center">
+                                                <img src="{{last_post_of_category_economie.thumbnail.url}}" alt="">
+                                                <div class="trend-top-cap">
+                                                    <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">{{ last_post_of_category_economie.category.name  }}</span>
+                                                    <h2><a href="{% url 'post_details' last_post_of_category_economie.slug %}" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ last_post_of_category_economie.title }}</a></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single slider -->
+                                    <div class="single-slider">
+                                        <div class="trending-top mb-30">
+                                            <div class="trend-top-img text-center">
+                                                <img src="{{last_post_of_category_economie.thumbnail.url}}" alt="">
+                                                <div class="trend-top-cap">
+                                                    <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"> {{  last_post_of_category_economie.title  }}</span>
+                                                    <h2><a href="{% url 'post_details' last_post_of_category_economie.slug %}"  data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ last_post_of_category_economie.intro }}</a></h2>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Single slider -->
-                                <div class="single-slider">
-                                    <div class="trending-top mb-30">
-                                        <div class="trend-top-img text-center">
-                                            <img src="{{last_post_of_category_economie.thumbnail.url}}" alt="">
-                                            <div class="trend-top-cap">
-                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"> {{  last_post_of_category_economie.title  }}</span>
-                                                <h2><a href="{% url 'post_details' last_post_of_category_economie.slug %}"  data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ last_post_of_category_economie.intro }}</a></h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-6">
