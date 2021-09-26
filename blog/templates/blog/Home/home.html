@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="latest-slider">
-                            {% if last_post_of_category_culture_et_sport %}
+                            {% if last_post_of_category_economie %}
                                 <div class="slider-active">
                                     <!-- Single slider -->
                                     <div class="single-slider">
@@ -53,6 +53,7 @@
                     <div class="col-lg-6">
                         <!-- smoll items -->
                         <div class="row">
+                         {% if last_post_of_category_culture_et_sport %}
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="single-baner-nw2 mb-30 ">
                                     <div class="banner-img-cap2">
@@ -62,7 +63,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {% if last_post_of_category_culture_et_sport %}
+                           
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="single-baner-nw2 mb-30">
                                         <div class="banner-img-cap2">
@@ -136,71 +137,7 @@
                 </div>
             </div>
         </div>
-        <!-- Latest Posts End-->
-        <!-- Video Area Start -->
-        <!-- <div class="video-area">
-            <div class="container-fluid">
-                <div class="video-wrapper">
-                    <div class="left-content">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="section-tittle section-tittle2 mb-35">
-                                    <h2 class="mb-10">Videos</h2>
-                                    <p>les dernieres videos</p>
-                                    <p class="video-cap">
-                                        titre<br> et<br> details
-                                    </p>
-                                    <small></small>
-                                </div>
-                            </div> -->
-                            <!--Left Single -->
-                           <!-- <div class="col-lg-6 col-md-6">
-                                <div class="single-baner-nw4 mb-30">
-                                    <div class="banner-img-cap4">
-                                        <div class="banner-img4">
-                                            <img src="assets/img/gallery/video_img1.png" alt=""> -->
-                                            <!--video iocn -->
-                                          <!--  <div class="video-icon video-icon2">
-                                                <a class="popup-video btn-icon" href="https://youtu.be/3KGOuinIL9c" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="banner-cap4">
-                                            <h3><a href="post_details.html">sous titre/details</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="single-baner-nw4 mb-30">
-                                    <div class="banner-img-cap4">
-                                        <div class="banner-img4">
-                                            <img src="assets/img/gallery/video_img2.png" alt=""> -->
-                                            <!--video iocn -->
-                                          <!--  <div class="video-icon video-icon2">
-                                                <a class="popup-video btn-icon" href="" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="banner-cap4">
-                                            <h3><a href="post_details.html">sous-titre/details</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right-content">
-                        <div class="video-img">
-                            <img src="assets/img/gallery/video_bg.png" alt=""> -->
-                            <!--video iocn -->
-                           <!-- <div class="video-icon video-icon2">
-                                <a class="popup-video btn-icon" href="" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Video Area End -->
+     
         <!-- Nwes slider Start -->
         <div class="nes-slider-area pt-80 pb-80">
             <div class="container">
@@ -242,7 +179,7 @@
                                 <div class="single-job-items mb-30">
                                     <div class="job-items">
                                         <div class="company-img">
-                                            <a href="{% url 'post_details' random_post_of_category_culture_et_sport.slug %}"><img src="{{ random_post_of_category_culture_et_sport.thumbnail.url }}" alt=""></a>
+                                            <a href="{% url 'post_details' random_post_of_category_culture_et_sport.slug %}"><img src="{{ random_post_of_category_culture_et_sport.thumbnail.url }}" width="260" height="200" alt=""></a>
                                         </div>
                                         <div class="job-tittle">
                                             <span>{{ random_post_of_category_culture_et_sport.category }}</span>
@@ -279,7 +216,7 @@
                             <div class="single-baner-nw2 mb-30">
                                 <div class="banner-img-cap2">
                                     <div class="banner-img">
-                                        <img src="{{random_post_of_category_international.thumbnail.url}}" alt="">
+                                        <img src="{{random_post_of_category_international.thumbnail.url}}" width="360" height="290" alt="">
                                     </div>
                                     <div class="banner-cap2">
                                         <p>{{ random_post_of_category_international.category.name }}</p>

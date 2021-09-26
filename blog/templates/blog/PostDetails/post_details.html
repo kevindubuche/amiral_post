@@ -3,7 +3,8 @@
 
 {% block content %}
 
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v12.0&appId=629697294691650&autoLogAppEvents=1" nonce="QMv3qXl2"></script>
         <!-- breadcrumb Start-->
         <div class="page-notification">
             <div class="container">
@@ -46,15 +47,20 @@
                     <div class="col-lg-10">
                         <div class="about-details-cap">
 
+
+                            <div class="sharethis-inline-share-buttons"></div>
+
                    
                             <!-- Socaial -->
-                            <div class="social-iocn pt-20 pb-20">
+                           <!--<div class="social-iocn pt-20 pb-20">
                                 <a href="#"><img class="mr-10 mb-10" src="{% static 'assets/img/gallery/facebook.png' %}" alt=""></a>
                                 <a href="#"><img class="mr-10 mb-10" src="{% static 'assets/img/gallery/twitter.png' %}" alt="#"></a>
                                 <a href="#"><img class="mr-10 mb-10" src="{% static 'assets/img/gallery/pinterest.png' %}" alt=""></a>
                                 <a href="#"><img class="mb-10" src="{% static 'assets/img/gallery/whatsapp.png' %}" alt=""></a>
 
-                            </div>
+                            </div> -->
+
+                            <div class="fb-comments" data-href="https://amiral-post.herokuapp.com" data-width="800" data-numposts="5"></div>
 
 
                         </div>

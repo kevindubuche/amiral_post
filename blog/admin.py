@@ -10,9 +10,9 @@ class PostAdmin(SummernoteModelAdmin):
     list_per_page = 15
     summernote_fields = ('content', )
 
-# class PubAdmin(Pub):
-#     list_display = ('title','link')
-#     list_display_links = ('tile','link',)
+class PubAdmin(admin.ModelAdmin):
+    list_display = ('title','link')
+    list_display_links = ('title','link',)
 
 class TeamAdmin(admin.ModelAdmin):
     list_display = ('name', 'title',)
@@ -20,7 +20,7 @@ class TeamAdmin(admin.ModelAdmin):
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category)
-admin.site.register(Pub)
+admin.site.register(Pub, PubAdmin)
 admin.site.register(Team, TeamAdmin)
 
 admin.site.site_header = 'Amiral Posts'
