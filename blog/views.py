@@ -10,7 +10,14 @@ def home(request):
     if 'keyword' in request.GET:
         keyword = request.GET['keyword']
         posts = Post.objects.filter(keywords__icontains = keyword)
-        return render(request, 'blog/Category/posts_of_a_category.html', {'posts': posts, 'categories': categories})
+        paginator = Paginator(posts, 8)
+        page = request.GET.get('page')
+        posts = paginator.get_page(page)
+        try:
+            pub = Pub.objects.all()[0]
+        except :
+            pub = None
+        return render(request, 'blog/Category/posts_of_a_category.html', {'posts': posts, 'categories': categories,'pub': pub})
     # HANDLE THE SEARCH ENGINE___END
     filter_fields = ("category")
     posts = Post.objects.all()
@@ -27,7 +34,7 @@ def home(request):
     except :
         last_post_of_category_diplomatie = None
     try:
-       last_post_of_category_economie = Post.objects.filter(category__name__iexact = 'economie')[0]
+       last_post_of_category_economie = Post.objects.filter(category__name__iexact = 'Économie')[0]
     except :
         last_post_of_category_economie = None
     try:
