@@ -47,6 +47,10 @@
                     <div class="col-lg-10">
                         <div class="about-details-cap">
 
+                            <h4>
+                               Auteur:   {{ post.author }}
+                            </h4>
+
 
                             <div class="sharethis-inline-share-buttons"></div>
 
@@ -114,13 +118,18 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-md-12">
-                            <form action="#" class="search-box">
+                            <form action="https://amiralposts.us5.list-manage.com/subscribe/post" method="POST" class="search-box">
+                                <input type="hidden" name="u" value="c580344d9b3b3d0bbc0104e3e">
+                                <input type="hidden" name="id" value="30d3489da2">
                                 <div class="input-form">
-                                    <input type="text" placeholder="Entrez votre email">
+                                  <!--  <input type="email" name="MERGEO" id="MERGEO" placeholder="Entrez votre  email"> -->
                                 </div>
                                 <div class="search-form">
-                                    <a href="#">S'enregistrer</a>
+                                    <input type="submit" class="formEmailButton" name="submit" value="S'enregistrer" >
+                                    <!--<a href="#">S'enregistrer </a> -->
                                 </div>
+                               <input type="hidden" name="ht" value="7a8e8cb6ea75be06bc24c8551129f0f558320bd3:MTYzMjc3NTc0NS43NTc0">
+                               <input type="hidden" name="mc_signupsource" value="hosted">
                             </form>
                         </div>
                     </div>
