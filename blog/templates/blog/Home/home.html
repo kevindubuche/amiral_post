@@ -26,7 +26,7 @@
                                     <div class="single-slider">
                                         <div class="trending-top mb-30">
                                             <div class="trend-top-img text-center">
-                                                <img src="{{last_post_of_category_economie.thumbnail.url}}" alt="">
+                                                <img src="{{last_post_of_category_economie.thumbnail.url}}" width="550" height="640" alt="">
                                                 <div class="trend-top-cap">
                                                     <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">{{ last_post_of_category_economie.category.name  }}</span>
                                                     <h2><a href="{% url 'post_details' last_post_of_category_economie.slug %}" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ last_post_of_category_economie.title }}</a></h2>
@@ -38,7 +38,7 @@
                                     <div class="single-slider">
                                         <div class="trending-top mb-30">
                                             <div class="trend-top-img text-center">
-                                                <img src="{{last_post_of_category_economie.thumbnail.url}}" alt="">
+                                                <img src="{{last_post_of_category_economie.thumbnail.url}}" width="550" height="640" alt="">
                                                 <div class="trend-top-cap">
                                                     <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"> {{  last_post_of_category_economie.title  }}</span>
                                                     <h2><a href="{% url 'post_details' last_post_of_category_economie.slug %}"  data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">{{ last_post_of_category_economie.intro }}</a></h2>
@@ -179,7 +179,7 @@
                                 <div class="single-job-items mb-30">
                                     <div class="job-items">
                                         <div class="company-img">
-                                            <a href="{% url 'post_details' random_post_of_category_culture_et_sport.slug %}"><img src="{{ random_post_of_category_culture_et_sport.thumbnail.url }}" alt=""></a>
+                                            <a href="{% url 'post_details' random_post_of_category_culture_et_sport.slug %}"><img src="{{ random_post_of_category_culture_et_sport.thumbnail.url }}" width="260" height="200" alt=""></a>
                                         </div>
                                         <div class="job-tittle">
                                             <span>{{ random_post_of_category_culture_et_sport.category }}</span>
@@ -216,7 +216,7 @@
                             <div class="single-baner-nw2 mb-30">
                                 <div class="banner-img-cap2">
                                     <div class="banner-img">
-                                        <img src="{{random_post_of_category_international.thumbnail.url}}" alt="">
+                                        <img src="{{random_post_of_category_international.thumbnail.url}}" width="360" height="290" alt="">
                                     </div>
                                     <div class="banner-cap2">
                                         <p>{{ random_post_of_category_international.category.name }}</p>
@@ -244,13 +244,18 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-md-12">
-                            <form action="#" class="search-box">
+                            <form action="https://amiralposts.us5.list-manage.com/subscribe/post" method="POST" class="search-box">
+                                <input type="hidden" name="u" value="c580344d9b3b3d0bbc0104e3e">
+                                <input type="hidden" name="id" value="30d3489da2">
                                 <div class="input-form">
-                                    <input type="text" placeholder="Entrez votre  email">
+                                  <!--  <input type="email" name="MERGEO" id="MERGEO" placeholder="Entrez votre  email"> -->
                                 </div>
                                 <div class="search-form">
-                                    <a href="#">S'enregistrer </a>
+                                    <input type="submit" class="formEmailButton" name="submit" value="S'enregistrer" >
+                                    <!--<a href="#">S'enregistrer </a> -->
                                 </div>
+                               <input type="hidden" name="ht" value="7a8e8cb6ea75be06bc24c8551129f0f558320bd3:MTYzMjc3NTc0NS43NTc0">
+                               <input type="hidden" name="mc_signupsource" value="hosted">
                             </form>
                         </div>
                     </div>
