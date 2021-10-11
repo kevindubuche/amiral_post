@@ -3,6 +3,39 @@ from django.shortcuts import render
 from .models import Category, Post, Pub, Team
 from django.core.paginator import Paginator
 from django.shortcuts import redirect
+from django.core.mail import send_mail
+from django.conf import settings
+from django.contrib import messages
+
+def sendmail(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        data = {
+            'name': name,
+            'email': email,
+            'subject': subject,
+            'message': message
+        }
+        message = '''
+        Nouveau message: {}
+
+        De: {}
+        '''.format(data['message'],data['email'])
+        try:
+            send_mail(data['subject'],
+            message,
+            '',
+            ['Amiralpostssubmit@gmail.com'],
+            fail_silently=False
+            )
+            messages.success(request, 'Message envoyé !')
+        except :
+            messages.error(request, "Message non envoyé. Essayez plus tard.")
+
+        return redirect('home')
 
 def home(request): 
     categories = Category.objects.all()
