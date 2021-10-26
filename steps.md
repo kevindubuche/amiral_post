@@ -46,4 +46,4 @@ heroku addons:remove HEROKU_POSTGRESQL_BLUE_URL --app amiral-post
 heroku create
 git remote -v
 heroku git:remote -a amiral-post
-git push heroku kevin
+git push heroku main
