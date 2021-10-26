@@ -18,12 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from blog.views import home, post_details, posts_of_a_category, about, contact
+from blog.views import home, post_details, posts_of_a_category, about, contact, sendmail
 from django.views.static import serve
 from django.conf.urls import url
 
 urlpatterns = [
     path('', home, name='home'),
+    path('sendmail/', sendmail, name='sendmail'),
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
     path('article/<slug:slug>/', post_details, name='post_details'),
