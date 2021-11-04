@@ -1,17 +1,6 @@
 {% extends 'blog/base.html' %}
 {% load static %}
-
-
-{% block content %}
-        <!-- Banner News Area Start -->
-      {% include 'blog/Home/last_five_posts.html' %}
-        <!-- Banner News Area End -->
-        <!-- Latest Posts Area -->
-
-
-
-
-        <div id="google_translate_element"></div>
+<div id="google_translate_element"></div>
 
 <script type="text/javascript">
 function googleTranslateElementInit() {
@@ -21,6 +10,20 @@ function googleTranslateElementInit() {
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+
+{% block content %}
+
+
+
+        <!-- Banner News Area Start -->
+      {% include 'blog/Home/last_five_posts.html' %}
+        <!-- Banner News Area End -->
+        <!-- Latest Posts Area -->
+
+
+
+
+       
 
 
 
