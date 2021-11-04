@@ -32,3 +32,18 @@ django_summernote==0.8.11.6
 Django==2.2.12
 gunicorn==20
 Pillow==8.3.2
+
+----change database plan----
+heroku config --app amiral-post
+heroku addons:create heroku-postgresql:hobby-basic --app amiral-post
+heroku maintenance:on --app amiral-post
+heroku pg:copy DATABASE_URL HEROKU_POSTGRESQL_AMBER_URL --app amiral-post
+heroku pg:promote HEROKU_POSTGRESQL_AMBER_URL --app amiral-post
+heroku maintenance:off --app amiral-post
+heroku addons:remove HEROKU_POSTGRESQL_BLUE_URL --app amiral-post
+
+------heroku CLI----
+heroku create
+git remote -v
+heroku git:remote -a amiral-post
+git push heroku main
