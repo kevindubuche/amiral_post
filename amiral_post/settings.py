@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'blog',
     'storages',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -126,6 +127,16 @@ USE_L10N = True
 
 USE_TZ = False
 
+
+AWS_ACCESS_KEY_ID = os.environ.get('BUCKETEER_AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('BUCKETEER_AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME= "bucketeer-4c91a1ce-1507-4e8d-9592-a909931f4984"
+AWS_S3_SIGNATURE= 's3v4'
+AWS_S3_REGION_NAME = 'us-east-1'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+AWS_S3_VERIFY = True
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

@@ -15,7 +15,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255, verbose_name='Titre', help_text='Maximum: 255 caractères')
     author = models.CharField(max_length=255, verbose_name='Auteur', help_text='Maximum: 255 caractères')
     category = models.ForeignKey(Category, verbose_name='Catégorie', null=True, on_delete=models.SET_NULL)
-    thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Image')
+    thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Image') #'photos/%Y/%m/%d/'
     slug = models.SlugField()
     intro = models.TextField()
     keywords = models.TextField(verbose_name='Mots clés', null=True)
